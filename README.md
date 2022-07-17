@@ -1,2 +1,4 @@
 # myGOplay
-my first golang project
+My first golang project
+
+added go.mod
