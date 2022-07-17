@@ -23,20 +23,6 @@ func CreateDB() *sql.DB {
 	if err != nil {
 		fmt.Println(err.Error())
 	}
-	
+
 	return db
-}
-
-func CheckVersion(db *sql.DB) string {
-	var (
-		err     error
-		version string
-	)
-
-	err = db.QueryRow("SELECT VERSION()").Scan(&version)
-	if err != nil {
-		fmt.Println(err.Error())
-	}
-
-	return version
 }
