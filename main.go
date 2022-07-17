@@ -1,11 +1,17 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+
+	"github.com/RohithGujja/myGOplay/services"
+	_ "github.com/go-sql-driver/mysql"
+)
 
 func main() {
-	logHello("Rohith")
-}
+	db := services.CreateDB()
 
-func logHello(s string) {
-	fmt.Println("Hello: ", s)
+	// db Check
+	version := services.CheckVersion(db)
+
+	fmt.Println("version: ", version)
 }
