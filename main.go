@@ -17,7 +17,7 @@ func main() {
 	fmt.Println("version: ", version)
 
 	// query student table
-	student := services.GetStudent(ctx, db, 1)
+	student := services.GetStudent(ctx, db, 2)
 	fmt.Println("student id: ", student.Id)
 	fmt.Println("student name: ", student.Name)
 
